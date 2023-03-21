@@ -9,6 +9,8 @@ namespace PhuongTrieu.ViewModels
 {
     public class CourseViewModel
     {
+        public IEnumerable<Course> UpcommingCourses { get; set; }
+        public bool ShowAction { get;set; }
         [Required]
         public string Place { get; set; }
         [Required]
@@ -18,7 +20,7 @@ namespace PhuongTrieu.ViewModels
         [ValidTime]
         public string Time { get; set; }
         [Required]
-        public string Category { get; set; }
+        public byte Category { get; set; }
         public IEnumerable<Category> Categories { get; set; }
         public DateTime GetDateTime() 
         {

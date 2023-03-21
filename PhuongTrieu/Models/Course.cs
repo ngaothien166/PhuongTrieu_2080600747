@@ -19,6 +19,6 @@ namespace PhuongTrieu.Models
         public DateTime DateTime { get; set; }
         public Category Category { get; set; }
         [Required]
-        public string CategoryId { get; set; }
+        public byte CategoryId { get; set; }
     }
 }

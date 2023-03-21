@@ -19,10 +19,29 @@ textarea {
     max-width: 280px;
 }
 .navbar-inverse {
-    background-color: #808080;
+    background-color: #ffd800;
 }
 a {
     color: #000;
     text-decoration: underline;
+}
+.course {
+    list-style: none;
+}
+.course > li{
+    position:relative;
+    margin-bottom:30px;
+}
+.course > li .date {
+    text-align: center;
+    background-color: #ffd800;
+    color: white;
+    width: 60px;
+    border-radius: 8px;
+}
+.course> li .details{
+    position:absolute;
+    top: 0;
+    left: 70px;
 }
 

@@ -13,7 +13,7 @@ namespace PhuongTrieu.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202303091535526_CreateTableCourse"; }
+            get { return "202303210633443_CreateTableCourse"; }
         }
         
         string IMigrationMetadata.Source

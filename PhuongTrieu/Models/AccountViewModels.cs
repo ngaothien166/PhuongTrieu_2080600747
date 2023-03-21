@@ -1,7 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using CompareAttribute = System.ComponentModel.DataAnnotations.CompareAttribute;
+using System.Web.ModelBinding;
+using System.Web.WebPages.Html;
 
 namespace PhuongTrieu.Models
 {
@@ -63,7 +68,6 @@ namespace PhuongTrieu.Models
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
-
     public class RegisterViewModel
     {
         [Required]
@@ -83,7 +87,7 @@ namespace PhuongTrieu.Models
         public string ConfirmPassword { get; set; }
         [Required]
         [StringLength(255)]
-        public string Name { get;set; }
+        public string Name { get;   set; }
     }
     public class ResetPasswordViewModel
     {
@@ -112,5 +116,6 @@ namespace PhuongTrieu.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
-    }
+    } 
+
 }
