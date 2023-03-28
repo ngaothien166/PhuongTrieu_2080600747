@@ -27,7 +27,7 @@ namespace PhuongTrieu.Controllers
                 UpcommingCourses = upcomingCourses,
                 ShowAction = User.Identity.IsAuthenticated
             };
-            return View(upcomingCourses);
+            return View(viewModel);
         }
 
         public ActionResult About()

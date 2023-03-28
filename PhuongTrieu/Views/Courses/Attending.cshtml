@@ -1,8 +1,11 @@
-﻿@model PhuongTrieu.ViewModels.CourseViewModel
+﻿
 @{
     ViewBag.Title = "Attending";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <h2>Attending</h2>
+
 <ul class="course">
 
     @foreach (var course in Model.UpcommingCourses)
@@ -20,50 +23,32 @@
                 <span class="lecturer">
                     @course.Lecturer.Name
                     @if (Model.ShowAction)
-                    {
-                        <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>
-                    }
+                    {<button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>}
                 </span>
+                <br />
                 <span class="category">
                     @course.Category.Name
-                </span>
-                @if (Model.ShowAction)
-                {
-                    <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
-                }
+                </span>             
             </div>
         </li>
     }
 </ul>
-@section scripts
-{
+@section scripts{
     <script>
-        $(document).ready(funtion(){
-            $(".js-toggle-attendance").click(funtion(e) {
-                var button = $(e.target);
-                $.post("/api/attendances", { courseId: button.attr("data-course-id") })
-                    .done(funtion(){
-                        button
-                                    .removeClass("btn-default")
-                            .addClass("btn-info")
-                            .text("Going");
-                    })
-                    .fail(funtion(){
-                        alert("Something failed!");
-                    });
-            });
-            $(".js-toggle-follow").click(funtion(e){
+
+            $(".js-toggle-follow").click(function (e) {
                 var button = $(e.target);
                 $.post("/api/followings", { followeeId: button.attr("data-user-id") })
-                    .done(funtion(){
-                        button.text("Following");
+                    .done(function () {
+                        button
+                            .removeClass("btn-default")
+                            .addClass("btn-info")
+                            .text("Following");
                     })
-                    .fail(funtion(){
+                    .fail(function () {
                         alert("Something failed");
                     });
             });
-        });
+
     </script>
 }
-
-

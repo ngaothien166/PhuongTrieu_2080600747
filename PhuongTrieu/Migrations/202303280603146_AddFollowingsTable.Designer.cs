@@ -13,7 +13,7 @@ namespace PhuongTrieu.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202303210817177_AddFollowingsTable"; }
+            get { return "202303280603146_AddFollowingsTable"; }
         }
         
         string IMigrationMetadata.Source

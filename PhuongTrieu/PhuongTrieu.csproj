@@ -209,9 +209,9 @@
     <Compile Include="Migrations\202303210646182_AddAttendance.designer.cs">
       <DependentUpon>202303210646182_AddAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303210817177_AddFollowingsTable.cs" />
-    <Compile Include="Migrations\202303210817177_AddFollowingsTable.designer.cs">
-      <DependentUpon>202303210817177_AddFollowingsTable.cs</DependentUpon>
+    <Compile Include="Migrations\202303280603146_AddFollowingsTable.cs" />
+    <Compile Include="Migrations\202303280603146_AddFollowingsTable.designer.cs">
+      <DependentUpon>202303280603146_AddFollowingsTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -305,7 +305,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Followings\" />
-    <Folder Include="Views\Following\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -350,8 +349,8 @@
     <EmbeddedResource Include="Migrations\202303210646182_AddAttendance.resx">
       <DependentUpon>202303210646182_AddAttendance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303210817177_AddFollowingsTable.resx">
-      <DependentUpon>202303210817177_AddFollowingsTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303280603146_AddFollowingsTable.resx">
+      <DependentUpon>202303280603146_AddFollowingsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
